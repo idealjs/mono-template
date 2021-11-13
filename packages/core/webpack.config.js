@@ -1,7 +1,9 @@
 const path = require("path");
+const BundleAnalyzerPlugin =
+  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
 
-module.exports = {
-  mode: "production",
+module.exports = (env) => ({
+  mode: env.production ? "production" : "development",
   entry: "./index.ts",
   devtool: "source-map",
   module: {
@@ -24,4 +26,11 @@ module.exports = {
     filename: "index.js",
   },
   externals: [],
-};
+  plugins: [
+    new BundleAnalyzerPlugin({
+      analyzerMode: env.production ? "disabled" : "static",
+      openAnalyzer: false,
+      reportFilename: "analyzer.html",
+    }),
+  ],
+});
