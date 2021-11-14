@@ -1,5 +1,6 @@
-import { moduleA } from "@idealjs/mono-template";
 import "./App.css";
+
+import { moduleA } from "@idealjs/mono-template";
 import { useEffect, useRef } from "react";
 
 function App() {
