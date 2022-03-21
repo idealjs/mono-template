@@ -5,8 +5,7 @@
   "types": "dist/index.d.ts",
   "license": "MIT",
   "scripts": {
-    "build:prod": "rm -rf dist && webpack build --env production",
-    "build": "webpack",
-    "test": "jest"
+    "build:prod": "rm -rf dist && yarn build --env production",
+    "build": "webpack"
   }
 }

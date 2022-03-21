@@ -8,7 +8,7 @@
   "repository": "git@github.com:idealjs/mono-template.git",
   "license": "MIT",
   "scripts": {
-    "postinstall": "lerna bootstrap"
+    "test": "jest"
   },
   "devDependencies": {
     "eslint-plugin-simple-import-sort": "^7.0.0",
