@@ -1,17 +1,6 @@
-# Quick Start
-
-- Install Deps.At Root Of Workspace
-
-```
-yarn
-```
-
-- Start
-
-```
-yarn start
-```
-
 ## Use HTTP2
 
 - Generate Key
+- Set Env
+
+  Add `HTTP2=ture` to `.env`
