@@ -1,17 +1,26 @@
 const path = require("path");
+const { getLoader, loaderByName } = require("@craco/craco");
+const NodePolyfillPlugin = require("node-polyfill-webpack-plugin");
+
+const packages = path.join(__dirname, "../packages");
 
 module.exports = {
   webpack: {
     configure: (webpackConfig, { paths }) => {
-      const tsLoader = {
-        test: /\.(js|mjs|jsx|ts|tsx)$/,
-        loader: require.resolve("ts-loader"),
-        options: {
-          transpileOnly: true,
-          configFile: path.resolve(__dirname, "tsconfig.json"),
-        },
-      };
-      webpackConfig.module.rules.push(tsLoader);
+      const { isFound, match } = getLoader(
+        webpackConfig,
+        loaderByName("babel-loader")
+      );
+      if (isFound) {
+        const include = Array.isArray(match.loader.include)
+          ? match.loader.include
+          : [match.loader.include];
+        match.loader.include = include.concat(packages);
+      }
+
+      webpackConfig.plugins.push(
+        new NodePolyfillPlugin({ excludeAliases: ["console"] })
+      );
       return webpackConfig;
     },
   },
