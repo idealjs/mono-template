@@ -2,9 +2,10 @@
   "name": "@idealjs/mono-template-server",
   "version": "0.1.0",
   "license": "MIT",
+  "type": "module",
   "scripts": {
     "generate:dev": "openssl req -x509 -newkey rsa:2048 -nodes -sha256 -subj '/CN=localhost' -addext 'subjectAltName = DNS.1:localhost' -keyout server.key -out server.crt",
-    "start": "nodemon"
+    "dev": "nodemon"
   },
   "devDependencies": {
     "@types/koa__router": "^12.0.0",
@@ -15,6 +16,7 @@
     "typescript": "^4.9.4"
   },
   "dependencies": {
+    "@idealjs/mono-template": "^1.0.0",
     "@koa/router": "^12.0.0",
     "koa": "^2.14.1"
   }
