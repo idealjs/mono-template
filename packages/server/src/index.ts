@@ -1,12 +1,12 @@
-import http from "./http";
-import http2 from "./http2";
+import app from "./app";
 
-const port = 3010;
+const port = 3100;
 
-const callback = () => {
+const callback = (err: Error | null) => {
   console.debug(`[debug] server is listen on port ${port}`);
+  if (err) {
+    console.error(err);
+  }
 };
 
-process.env.HTTP2 === "true"
-  ? http2().listen(port, callback)
-  : http().listen(port, callback);
+app.listen({ port, host: "0.0.0.0" }, callback);

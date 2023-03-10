@@ -1,12 +1,10 @@
 import { moduleA } from "@idealjs/mono-template";
-import Router from "@koa/router";
+import { FastifyPluginCallback } from "fastify";
 
-const router = new Router();
+const routes: FastifyPluginCallback = async (fastify) => {
+  fastify.get("/health", () => {
+    return { alive: 1, testModule: moduleA };
+  });
+};
 
-router.get("/health", (ctx, next) => {
-  ctx.body = { alive: true };
-  console.log("[test] moduleA", moduleA);
-  next();
-});
-
-export default router;
+export default routes;

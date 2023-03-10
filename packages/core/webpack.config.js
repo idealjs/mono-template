@@ -1,8 +1,14 @@
-const path = require("path");
-const BundleAnalyzerPlugin =
-  require("webpack-bundle-analyzer").BundleAnalyzerPlugin;
+import path from "path";
+import { fileURLToPath } from "url";
+import { BundleAnalyzerPlugin } from "webpack-bundle-analyzer";
 
-module.exports = (env) => ({
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+/** @return {import('webpack').Configuration} */
+const config = (env) => ({
+  experiments: {
+    outputModule: true,
+  },
   mode: env.production ? "production" : "development",
   entry: "./index.ts",
   devtool: "source-map",
@@ -22,7 +28,9 @@ module.exports = (env) => ({
   },
   output: {
     path: path.resolve(__dirname, "dist"),
-    libraryTarget: "umd",
+    library: {
+      type: "module",
+    },
     filename: "index.js",
   },
   externals: [],
@@ -34,3 +42,5 @@ module.exports = (env) => ({
     }),
   ],
 });
+
+export default config;
