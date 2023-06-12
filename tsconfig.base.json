@@ -11,12 +11,11 @@
     "noFallthroughCasesInSwitch": true,
     "module": "ES2020",
     "moduleResolution": "Node",
+    "moduleDetection": "force",
+    "resolveJsonModule": true,
     "isolatedModules": true,
-    "declaration": true
-  },
-  "ts-node": {
-    "esm": true,
-    "swc": true,
-    "experimentalSpecifierResolution": "node"
+    "declaration": true,
+    "composite": true,
+    "importHelpers": true
   }
 }
