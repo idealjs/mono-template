@@ -2029,7 +2029,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@idealjs/mono-template-core@workspace:*, @idealjs/mono-template-core@workspace:packages/core":
+"@idealjs/mono-template-core@workspace:*, @idealjs/mono-template-core@workspace:^, @idealjs/mono-template-core@workspace:packages/core":
   version: 0.0.0-use.local
   resolution: "@idealjs/mono-template-core@workspace:packages/core"
   dependencies:
@@ -5323,6 +5323,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "example@workspace:example"
   dependencies:
+    "@idealjs/mono-template-core": "workspace:^"
     "@types/node": ^20.3.0
     "@types/react": ^18.2.11
     "@types/react-dom": ^18.2.4
