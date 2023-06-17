@@ -9,7 +9,7 @@ export default defineConfig({
     alias: {
       "@idealjs/mono-template-core": path.resolve(
         __dirname,
-        "../packages/core/src/index.ts"
+        "../../packages/core/src/index.ts"
       ),
     },
   },

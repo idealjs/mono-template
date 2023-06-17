@@ -11,5 +11,10 @@
         "enableDangerousAutofixThisMayCauseInfiniteLoops": true
       }
     ]
+  },
+  "settings": {
+    "react": {
+      "version": "18"
+    }
   }
 }

@@ -4,9 +4,17 @@
     "noEmit": true,
     "outDir": "dist",
     "lib": ["esnext"],
+    "paths": {
+      "@idealjs/mono-template-core": ["../core/src"]
+    }
   },
   "include": ["src"],
   "exclude": ["node_modules"],
+  "references": [
+    {
+      "path": "../core"
+    }
+  ],
   "ts-node": {
     "esm": true,
     "swc": true,

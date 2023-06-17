@@ -1,19 +1,18 @@
 {
-  "extends": "../tsconfig.base.json",
+  "extends": "../../tsconfig.base.json",
   "compilerOptions": {
     "noEmit": true,
     "outDir": "dist",
     "jsx": "react-jsx",
-    "types": ["node"],
     "paths": {
-      "@idealjs/mono-template-core": ["../packages/core/src"]
+      "@idealjs/mono-template-core": ["../../packages/core/src"]
     }
   },
   "include": ["src"],
   "exclude": ["node_modules"],
   "references": [
     {
-      "path": "../packages/core"
+      "path": "../../packages/core"
     }
   ]
 }
