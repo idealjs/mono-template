@@ -12,6 +12,7 @@ export default defineConfig({
       config: () => {
         return {
           build: {
+            ssr: "./src/index.ts",
             rollupOptions: {
               input: "./src/index.ts",
             },

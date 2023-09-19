@@ -1878,6 +1878,7 @@ __metadata:
     ts-node: "npm:^10.9.1"
     typescript: "npm:^5.1.3"
     vite: "npm:^4.3.9"
+    vite-plugin-node: "npm:^3.0.2"
   languageName: unknown
   linkType: soft
 
@@ -2019,6 +2020,16 @@ __metadata:
     rollup:
       optional: true
   checksum: a0a902c3e8f499a3fd5bc88947bf48c6a37c05320c71359ab913c335b4ebb841b33c48086f27744200379c5122fad8e586be1088f2b29aeb4097d5f6ff39aa14
+  languageName: node
+  linkType: hard
+
+"@rollup/pluginutils@npm:^4.1.1":
+  version: 4.2.1
+  resolution: "@rollup/pluginutils@npm:4.2.1"
+  dependencies:
+    estree-walker: "npm:^2.0.1"
+    picomatch: "npm:^2.2.2"
+  checksum: 503a6f0a449e11a2873ac66cfdfb9a3a0b77ffa84c5cad631f5e4bc1063c850710e8d5cd5dab52477c0d66cda2ec719865726dbe753318cd640bab3fff7ca476
   languageName: node
   linkType: hard
 
@@ -3091,7 +3102,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:^4.0.0":
+"chalk@npm:^4.0.0, chalk@npm:^4.1.2":
   version: 4.1.2
   resolution: "chalk@npm:4.1.2"
   dependencies:
@@ -3968,7 +3979,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"estree-walker@npm:^2.0.2":
+"estree-walker@npm:^2.0.1, estree-walker@npm:^2.0.2":
   version: 2.0.2
   resolution: "estree-walker@npm:2.0.2"
   checksum: b02109c5d46bc2ed47de4990eef770f7457b1159a229f0999a09224d2b85ffeed2d7679cffcff90aeb4448e94b0168feb5265b209cdec29aad50a3d6e93d21e2
@@ -5744,7 +5755,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"picomatch@npm:^2.3.1":
+"picomatch@npm:^2.2.2, picomatch@npm:^2.3.1":
   version: 2.3.1
   resolution: "picomatch@npm:2.3.1"
   checksum: 60c2595003b05e4535394d1da94850f5372c9427ca4413b71210f437f7b2ca091dbd611c45e8b37d10036fa8eade25c1b8951654f9d3973bfa66a2ff4d3b08bc
@@ -7008,6 +7019,23 @@ __metadata:
   bin:
     vite-node: vite-node.mjs
   checksum: 97a109bc919f335c6495ed3e24369514240e9b50792eb4e0d51bb37283b7add6f3d3273629b83c2e803c4fc42b0e79f31934dc7d4808a3eb853fbae1b08fbe91
+  languageName: node
+  linkType: hard
+
+"vite-plugin-node@npm:^3.0.2":
+  version: 3.0.2
+  resolution: "vite-plugin-node@npm:3.0.2"
+  dependencies:
+    "@rollup/pluginutils": "npm:^4.1.1"
+    chalk: "npm:^4.1.2"
+    debug: "npm:^4.3.2"
+  peerDependencies:
+    "@swc/core": ^1.2.153
+    vite: ^4.0.0
+  peerDependenciesMeta:
+    "@swc/core":
+      optional: true
+  checksum: a459e1c4c0b306fa046f6a973f97c8520c7fb6aaf30549107c5e6d8aed1ec4bfae52ffe8e4e224fadae473a96fd259da592d0cb878bfea6a7f1519a313d9f3f1
   languageName: node
   linkType: hard
 

@@ -21,3 +21,5 @@ const app = (
 app.register(routes);
 
 export default app;
+
+export { app as viteNodeApp };
