@@ -11,13 +11,13 @@
   },
   "dependencies": {
     "@idealjs/mono-template-core": "workspace:*",
-    "fastify": "^4.18.0",
-    "rimraf": "^5.0.1"
+    "fastify": "^5.3.2",
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
-    "@types/node": "^18.16.18",
-    "ts-node": "^10.9.1",
-    "typescript": "^5.1.3",
-    "vite": "^4.3.9"
+    "@types/node": "^22.15.17",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3",
+    "vite": "^6.3.5"
   }
 }
