@@ -1,5 +1,5 @@
 import { moduleA } from "@idealjs/mono-template-core";
-import { FastifyPluginCallback } from "fastify";
+import type { FastifyPluginCallback } from "fastify";
 
 const routes: FastifyPluginCallback = async (fastify) => {
   fastify.get("/health", () => {

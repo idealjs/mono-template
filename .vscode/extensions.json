@@ -1,9 +1,9 @@
 {
   "recommendations": [
-    "dbaeumer.vscode-eslint",
-    "esbenp.prettier-vscode",
     "EditorConfig.EditorConfig",
     "mhutchie.git-graph",
-    "eamodio.gitlens"
+    "eamodio.gitlens",
+    "biomejs.biome",
+    "prettier.prettier-vscode"
   ]
 }

@@ -1,10 +1,10 @@
-import { FastifyInstance } from "fastify";
-import { IncomingMessage, Server, ServerResponse } from "http";
-import {
+import type { IncomingMessage, Server, ServerResponse } from "node:http";
+import type {
   Http2SecureServer,
   Http2ServerRequest,
   Http2ServerResponse,
-} from "http2";
+} from "node:http2";
+import type { FastifyInstance } from "fastify";
 
 import http from "./http";
 import http2 from "./http2";

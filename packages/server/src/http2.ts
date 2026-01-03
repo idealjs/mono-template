@@ -1,6 +1,6 @@
+import fs from "node:fs";
+import path from "node:path";
 import Fastify from "fastify";
-import fs from "fs";
-import path from "path";
 
 const createServer = () => {
   const options = {
