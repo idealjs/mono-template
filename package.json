@@ -9,15 +9,12 @@
   "repository": "git@github.com:idealjs/mono-template.git",
   "license": "MIT",
   "scripts": {
-    "lint": "eslint packages/**/*.{tsx,ts} examples/**/*.{tsx,ts} --fix"
+    "lint": "biome check packages examples --write"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.3.10",
-    "lerna": "^8.2.4",
-    "lodash": "^4.17.21",
-    "prettier": "^3.6.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "@biomejs/biome": "2.4.16",
+    "lerna": "^9.0.7",
+    "typescript": "^6.0.3"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.14.1"
 }

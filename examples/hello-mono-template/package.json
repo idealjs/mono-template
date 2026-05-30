@@ -9,9 +9,9 @@
     "preview": "vite preview"
   },
   "devDependencies": {
-    "@types/node": "^22.18.0",
-    "typescript": "^5.9.2",
-    "vite": "^7.1.4"
+    "@types/node": "^22.19.19",
+    "typescript": "^6.0.3",
+    "vite": "^8.0.14"
   },
   "dependencies": {
     "@idealjs/mono-template-core": "workspace:^"
